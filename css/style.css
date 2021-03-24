@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.navBar {
+    display: flex;
+    align-items: center;
+    transition: all .5s ease;
+}
+header {
+    display: inline-block;
+    padding: 15px;
+}
+header ul {
+    display: inline-block;
+    color: #275460;
+}
+
+header li {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+header p {
+    display: inline-block;
+}
+
+.heroImg {
+    background-color: #EBEBEB;
+    padding: 100px 15px;
+
+}
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+button {
+    padding: 15px;
+    background-color: #a26b59;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    height: 70px;
+    width: 100px;
+    font-family: 'Varela Round', sans-serif;
+}
+#resumeButton {
+    padding: 15px;
+    background-color: #a26b59;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    height: 70px;
+    width: 100px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+
+footer {
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+}
+footer ul {
+    background-color: white;
+    color: #275460;
+    list-style: none;
+    padding-left: 5px;
+    text-align: center;
+}
+footer li {
+    display: inline-block;
+    padding: 0px 7px;
+    text-align: center;
+}
+.gridContainer {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    padding: 9px;
+    margin: 0 auto;
+    background-color:#e0baa8;
+}
+
+h1 {
+    color: #a26b59;
+    padding: 5px; 
+    
+    
+}
+.gridContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "topLeft topRight" 
+    "bottomLeft bottomRight";
+    color: white;
+    padding: 9px;
+    margin: 0 auto;
+    background-color: #e0baa8;
+}
+.topLeft {
+    grid-template-areas: "topLeft";
+}
+.topRight {
+    grid-template-areas: "topRight";
+    display:grid;
+    justify-content: center;
+
+}
+.bottomLeft {
+    grid-template-areas: "bottomLeft";
+}
+.bottomRight {
+    grid-template-areas: "bottomRight";
+}
+
+.myWork {
+    display: flex;
+    flex-direction: column;
+}
+    
+.workGrid {
+    display: flex;
+    flex-direction: column;
+    column-count: 3;
+    justify-content: space-between;
+    background-color: #eac0b0;
+    color: white;
+    padding: 9px;
+}
+
+.fitWell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+    padding: 9px;
+   
+}
+
+.doiRedesign {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 150px;
+    margin-top: -30px;
+    padding: 15px;
+    
+}
+
+.allProjects {
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    padding-bottom: 10px;
+}
+
+
+@media only screen and (max-width:600){
+    .navBar {
+        display: none;
+    
+    }
+    .gridContainer {
+        display: grid;
+        width: min-content;
+        margin: 0auto;
+        grid-template-rows: 300px 300px 300px 300px 300px;
+        grid-template-columns:min-content max-content;
+        grid-template-areas: 
+          "topRight"
+          "topLeft"
+          "bottomRight"
+          "bottomLeft";
+    }
+
+    .workGrid {
+       justify-content: center;
+        width: 100%;
+        grid-template-rows: 300px 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "fitWell"
+          "doiRedesign";
+      
+    }
+
+    /*s
+    .gridContainer {
+        display: flex;
+        flex-direction: column;
+        grid-template-rows: 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            ".topRight"
+            ".topLeft"
+            ".bottomRight"
+            ".bottomLeft"
+    ;
+    }
+/* 
+.mySkills {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    background-color: teal;
+    color: white;   
+}
+
+.aboutGrid {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    background-color: thistle;
+ 
+}
+
+.skillsContainer {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+    margin: 10px;
+    background-color: tomato;
+}
+
+.currentlyContainer {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+    margin: 10px;
+    background-color: lightskyblue;
+}
+*/
