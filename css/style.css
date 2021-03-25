@@ -3,6 +3,34 @@ body {
     font-family: 'Varela Round', sans-serif;
 }
 
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    background-color: white;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+.preloader img {
+    animation: spin 3s ease;
+    transition: all;
+    width: 150px;
+    margin: 0 auto;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+}
+
 .navBar {
     display: flex;
     align-items: center;
@@ -12,11 +40,46 @@ header {
     display: inline-block;
     padding: 15px;
 }
-header ul {
+.navigation {
     display: inline-block;
     color: #275460;
 }
-
+.about {
+    display: inline-block;
+    color: #275460;
+}
+.about:hover {
+    display: inline-block;
+    background-color: pink;
+    color: white;
+}
+.projects {
+    display: inline-block;
+    color: #275460;
+}
+.projects:hover {
+    display: inline-block;
+    background-color: pink;
+    color: white;
+}
+.fun {
+    display: inline-block;
+    color: #275460;
+}
+.fun:hover {
+    display: inline-block;
+    background-color: pink;
+    color: white;
+}
+.connect {
+    display: inline-block;
+    color: #275460;
+}
+.connect:hover {
+    display: inline-block;
+    background-color: pink;
+    color: white;
+}
 header li {
     display: inline-block;
     padding: 0px 5px;
@@ -38,9 +101,25 @@ header p {
     background-color: #FFFFFF;
     text-align: center;
 }
+.heroBanner{
+    height:361.5px;
+}
+.heroBanner img{
+    width: 100%;
+}
 button {
     padding: 15px;
     background-color: #a26b59;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    height: 70px;
+    width: 100px;
+    font-family: 'Varela Round', sans-serif;
+}
+button:hover {
+    padding: 15px;
+    background-color: #eac0b0;
     color: white;
     font-size: 15px;
     border-radius: 4px;
@@ -58,7 +137,17 @@ button {
     width: 100px;
     font-family: 'Varela Round', sans-serif;
 }
-
+#resumeButton:hover {
+    padding: 15px;
+    background-color: #eac0b0;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    height: 70px;
+    width: 100px;
+    font-family: 'Varela Round', sans-serif;
+  
+}
 
 footer {
     align-items: center;
@@ -77,20 +166,9 @@ footer li {
     padding: 0px 7px;
     text-align: center;
 }
-.gridContainer {
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
-    padding: 9px;
-    margin: 0 auto;
-    background-color:#e0baa8;
-}
-
 h1 {
     color: #a26b59;
     padding: 5px; 
-    
-    
 }
 .gridContainer {
     display: grid;
@@ -105,19 +183,27 @@ h1 {
     background-color: #e0baa8;
 }
 .topLeft {
-    grid-template-areas: "topLeft";
+    grid-area: topLeft;
 }
 .topRight {
-    grid-template-areas: "topRight";
+    grid-area: topRight;
     display:grid;
     justify-content: center;
+}
 
+.topRight img{
+    background-image: url(../images/about_doodle.png);
+    
+}
+.topRight img:hover {
+    background-image: url(../images/about_nondoodle.jpeg);   
+    
 }
 .bottomLeft {
-    grid-template-areas: "bottomLeft";
+    grid-area: bottomLeft;
 }
 .bottomRight {
-    grid-template-areas: "bottomRight";
+    grid-area: bottomRight;
 }
 
 .myWork {
@@ -162,28 +248,42 @@ h1 {
 }
 
 
-@media only screen and (max-width:600){
-    .navBar {
-        display: none;
-    
-    }
-    .gridContainer {
-        display: grid;
-        width: min-content;
-        margin: 0auto;
-        grid-template-rows: 300px 300px 300px 300px 300px;
-        grid-template-columns:min-content max-content;
-        grid-template-areas: 
-          "topRight"
-          "topLeft"
-          "bottomRight"
-          "bottomLeft";
-    }
+@media (min-width: 300px) and (max-width: 600px){
 
+    .navigation {
+        display: none;
+    }
+    .content img {
+        width: 80%;
+        padding: 0px 20%;
+    }
+   
+        .gridContainer {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                 "topLeft"
+                 "topRight"
+                 "bottomLeft"
+                 "bottomRight";
+                 padding: 0 15px;
+         }
+
+         .workGrid {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                 "fitWell"
+                 "doiRedesign";
+                 padding: 0 25px;
+         }
+
+   /*      
     .workGrid {
-       justify-content: center;
-        width: 100%;
-        grid-template-rows: 300px 300px 300px 300px 300px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: min-content;
+        margin: 0 auto;
+        grid-template-rows: 300px 300px;
         grid-template-columns: 1fr;
         grid-template-areas:
           "fitWell"
@@ -191,7 +291,7 @@ h1 {
       
     }
 
-    /*s
+  /*  
     .gridContainer {
         display: flex;
         flex-direction: column;
@@ -204,7 +304,7 @@ h1 {
             ".bottomLeft"
     ;
     }
-/* 
+
 .mySkills {
     display: grid;
     grid-template-rows: 50% 50%;
@@ -229,7 +329,6 @@ h1 {
     margin: 10px;
     background-color: tomato;
 }
-
 .currentlyContainer {
     display: grid;
     grid-template-rows: 50% 50%;
@@ -238,4 +337,3 @@ h1 {
     margin: 10px;
     background-color: lightskyblue;
 }
-*/
