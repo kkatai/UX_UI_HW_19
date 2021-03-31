@@ -127,6 +127,9 @@ button:hover {
     width: 100px;
     font-family: 'Varela Round', sans-serif;
 }
+a {
+    color: white;
+}
 #resumeButton {
     padding: 15px;
     background-color: #a26b59;
